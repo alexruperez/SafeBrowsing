@@ -30,6 +30,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D577D20C206AFCB500D4A8D0"
+               BuildableName = "SafeBrowsingTests.xctest"
+               BlueprintName = "SafeBrowsingTests"
+               ReferencedContainer = "container:SafeBrowsing.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
