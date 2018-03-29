@@ -1,7 +1,7 @@
 # SafeBrowsing
-## Protect your users against malware and phishing threats using Google Safe Browsing
+### Protect your users against malware and phishing threats using Google Safe Browsing
 
-![SafeBrowsing](https://raw.githubusercontent.com/alexruperez/SafeBrowsing/master/Logo.png)
+![SafeBrowsing](https://github.com/alexruperez/SafeBrowsing/raw/master/Logo.jpg)
 
 [![Twitter](https://img.shields.io/badge/contact-@alexruperez-0FABFF.svg?style=flat)](http://twitter.com/alexruperez)
 [![Version](https://img.shields.io/cocoapods/v/SafeBrowsing.svg?style=flat)](http://cocoapods.org/pods/SafeBrowsing)
@@ -53,7 +53,7 @@ Just [enable Google Safe Browsing API](https://console.developers.google.com/api
 SafeBrowsing.apiKey = "YOUR_API_KEY_HERE"
 ```
 
-#### Advanced optional configuration
+##### Advanced optional configuration
 
 You can easily customize [threat types](https://developers.google.com/safe-browsing/v4/reference/rest/v4/ThreatType), [platform types](https://developers.google.com/safe-browsing/v4/reference/rest/v4/PlatformType) or [threat entry types](https://developers.google.com/safe-browsing/v4/reference/rest/v4/ThreatEntryType).
 
@@ -83,9 +83,9 @@ SafeBrowsing.isSafe(anURL) { isSafe, error in
 }
 ```
 
-#### Check single URL synchronously
+#### Check single URL synchronously:
 
-##### **Caution**: Don't call it in main thread
+###### **Caution**: Don't call it in main thread
 
 ```swift
 if SafeBrowsing.isSafe(anURL) {
@@ -93,7 +93,7 @@ if SafeBrowsing.isSafe(anURL) {
 }
 ```
 
-#### Open URL in Safari only if it's safe
+#### Open URL in Safari only if it's safe:
 
 ```swift
 SafeBrowsing.safeOpen(anURL) { opened, error in
@@ -101,9 +101,10 @@ SafeBrowsing.safeOpen(anURL) { opened, error in
 }
 ```
 
-#### UIApplication extension
+### UIApplication extension
 
 Yes, you can use SafeBrowsing with UIApplication, just like [open(_:options:completionHandler:)](https://developer.apple.com/documentation/uikit/uiapplication/1648685-open) method works.
+
 You also have all isSafe(_:) methods available with this extension.
 
 ```swift
@@ -115,7 +116,8 @@ UIApplication.shared.safeOpen(anURL) { opened, error in
 ### Testing Google Safe Browsing
 
 ```swift
-SafeBrowsing.isSafe(URL(string: "http://malware.testing.google.test/testing/malware/")!) { isSafe, error in
+let testingURL = URL(string: "http://malware.testing.google.test/testing/malware/")!
+SafeBrowsing.isSafe(testingURL) { isSafe, error in
     print(String(describing: error))
 }
 ```
