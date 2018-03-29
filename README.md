@@ -119,7 +119,7 @@ UIApplication.shared.safeOpen(anURL) { opened, error in
 ```swift
 let testingURL = URL(string: "http://malware.testing.google.test/testing/malware/")!
 SafeBrowsing.isSafe(testingURL) { isSafe, error in
-    print(String(describing: error))
+    print(error.debugDescription)
 }
 ```
 
