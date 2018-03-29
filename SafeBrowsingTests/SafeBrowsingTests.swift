@@ -79,9 +79,10 @@ class SafeBrowsingTests: XCTestCase {
         XCTAssertEqual(defaultError.debugDescription, "Unknown error.")
     }
 
-    func testIsSafe() {
+    func testSafeBrowsingAPIKeyMissingError() {
         do {
             _ = try UIApplication.shared.isSafe(URL(string: "http://google.com")!)
+            XCTFail()
         } catch {
             XCTAssertEqual((error as! SafeBrowsingError).debugDescription, "Get your key from https://console.cloud.google.com/apis/credentials and set SafeBrowsing.apiKey = \"YOUR_API_KEY_HERE\".")
         }
