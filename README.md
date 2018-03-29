@@ -7,6 +7,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 [![Build Status](https://travis-ci.org/alexruperez/SafeBrowsing.svg?branch=master)](https://travis-ci.org/alexruperez/SafeBrowsing)
+[![codecov](https://codecov.io/gh/alexruperez/SafeBrowsing/branch/master/graph/badge.svg)](https://codecov.io/gh/alexruperez/SafeBrowsing)
 
 ### Protect your users against malware and phishing threats using Google Safe Browsing
 
