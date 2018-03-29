@@ -1,8 +1,4 @@
 # SafeBrowsing
-### Protect your users against malware and phishing threats using Google Safe Browsing
-
-![SafeBrowsing](https://github.com/alexruperez/SafeBrowsing/raw/master/Logo.jpg)
-
 [![Twitter](https://img.shields.io/badge/contact-@alexruperez-0FABFF.svg?style=flat)](http://twitter.com/alexruperez)
 [![Version](https://img.shields.io/cocoapods/v/SafeBrowsing.svg?style=flat)](http://cocoapods.org/pods/SafeBrowsing)
 [![License](https://img.shields.io/cocoapods/l/SafeBrowsing.svg?style=flat)](http://cocoapods.org/pods/SafeBrowsing)
@@ -11,6 +7,10 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 [![Build Status](https://travis-ci.org/alexruperez/SafeBrowsing.svg?branch=master)](https://travis-ci.org/alexruperez/SafeBrowsing)
+
+### Protect your users against malware and phishing threats using Google Safe Browsing
+
+![SafeBrowsing](https://github.com/alexruperez/SafeBrowsing/raw/master/Logo.jpg)
 
 ## 🌟 Features
 
@@ -53,7 +53,7 @@ Just [enable Google Safe Browsing API](https://console.developers.google.com/api
 SafeBrowsing.apiKey = "YOUR_API_KEY_HERE"
 ```
 
-##### Advanced optional configuration
+#### Advanced optional configuration
 
 You can easily customize [threat types](https://developers.google.com/safe-browsing/v4/reference/rest/v4/ThreatType), [platform types](https://developers.google.com/safe-browsing/v4/reference/rest/v4/PlatformType) or [threat entry types](https://developers.google.com/safe-browsing/v4/reference/rest/v4/ThreatEntryType).
 
