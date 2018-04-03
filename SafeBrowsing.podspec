@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SafeBrowsing'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Protect your users against malware and phishing threats using Google Safe Browsing'
 
   s.homepage         = 'https://github.com/alexruperez/SafeBrowsing'

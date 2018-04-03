@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/SafeBrowsing.svg?style=flat)](http://cocoapods.org/pods/SafeBrowsing)
 [![License](https://img.shields.io/cocoapods/l/SafeBrowsing.svg?style=flat)](http://cocoapods.org/pods/SafeBrowsing)
 [![Platform](https://img.shields.io/cocoapods/p/SafeBrowsing.svg?style=flat)](http://cocoapods.org/pods/SafeBrowsing)
-[![Swift](https://img.shields.io/badge/Swift-4-orange.svg?style=flat)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat)](https://swift.org)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 [![Build Status](https://travis-ci.org/alexruperez/SafeBrowsing.svg?branch=master)](https://travis-ci.org/alexruperez/SafeBrowsing)

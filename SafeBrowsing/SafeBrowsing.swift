@@ -12,7 +12,7 @@ public struct SafeBrowsing {
 
     public static var apiKey: String?
     public static var clientId = Bundle.main.bundleIdentifier ?? "com.alexruperez.SafeBrowsing"
-    public static var clientVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.1.0"
+    public static var clientVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.1.1"
     public static var threatTypes: [ThreatType] = [.malware, .socialEngineering, .unwantedSoftware, .potenciallyHarmfulApplication]
     public static var platformTypes: [PlatformType] = [.any]
     public static var threatEntryTypes: [ThreatEntryType] = [.url, .executable]
