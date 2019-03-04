@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/SafeBrowsing.svg?style=flat)](http://cocoapods.org/pods/SafeBrowsing)
 [![License](https://img.shields.io/cocoapods/l/SafeBrowsing.svg?style=flat)](http://cocoapods.org/pods/SafeBrowsing)
 [![Platform](https://img.shields.io/cocoapods/p/SafeBrowsing.svg?style=flat)](http://cocoapods.org/pods/SafeBrowsing)
-[![Swift](https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://swift.org)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 [![Build Status](https://travis-ci.org/alexruperez/SafeBrowsing.svg?branch=master)](https://travis-ci.org/alexruperez/SafeBrowsing)
@@ -20,6 +20,8 @@
 - [x] Check single URL synchronously
 - [x] Open URL in Safari only if it's safe
 - [x] UIApplication extension
+- [x] UIViewController extension
+- [x] SFSafariViewController compatible
 
 ## 📲 Installation
 
@@ -102,6 +104,14 @@ SafeBrowsing.safeOpen(anURL) { opened, error in
 }
 ```
 
+#### Open URL in SFSafariViewController only if it's safe:
+
+```swift
+SafeBrowsing.safeOpenInSafariViewController(anURL, over: aViewController, animated: true) { opened, error in
+    // Your code here
+}
+```
+
 ### UIApplication extension
 
 Yes, you can use SafeBrowsing with UIApplication, just like [open(_:options:completionHandler:)](https://developer.apple.com/documentation/uikit/uiapplication/1648685-open) method works.
@@ -110,6 +120,22 @@ You also have all isSafe(_:) methods available with this extension.
 
 ```swift
 UIApplication.shared.safeOpen(anURL) { opened, error in
+    // Your code here
+}
+```
+
+#### Open URL in SFSafariViewController only if it's safe:
+
+```swift
+UIApplication.shared.safeOpenInSafariViewController(anURL, over: aViewController, animated: true) { opened, error in
+    // Your code here
+}
+```
+
+#### UIViewController extension
+
+```swift
+aViewController.safeOpenInSafariViewController(anURL, animated: true) { opened, error in
     // Your code here
 }
 ```

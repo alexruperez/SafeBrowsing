@@ -10,11 +10,11 @@ import UIKit
 
 public extension UIApplication {
 
-    public func isSafe(_ urls: [URL], completionHandler completion: @escaping SafeBrowsingHandler) {
+    public func isSafe(_ urls: [URL], completion: @escaping SafeBrowsingHandler) {
         SafeBrowsing.isSafe(urls, completionHandler: completion)
     }
 
-    public func isSafe(_ url: URL, completionHandler completion: @escaping SafeBrowsingHandler) {
+    public func isSafe(_ url: URL, completion: @escaping SafeBrowsingHandler) {
         SafeBrowsing.isSafe(url, completionHandler: completion)
     }
 
@@ -23,8 +23,13 @@ public extension UIApplication {
     }
 
     // The completion handler is called on the main queue.
-    public func safeOpen(_ url: URL, options: [String : Any] = [:], completionHandler completion: @escaping SafeBrowsingHandler) {
+    public func safeOpen(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any] = [:], completion: @escaping SafeBrowsingHandler) {
         SafeBrowsing.safeOpen(url, application: self, options: options, completionHandler: completion)
+    }
+
+    // The completion handler is called on the main queue.
+    public func safeOpenInSafariViewController(_ url: URL, over viewController: UIViewController, animated: Bool = true, completion: SafeBrowsingHandler? = nil) {
+        SafeBrowsing.safeOpenInSafariViewController(url, over: viewController, animated: animated, application: self, completion: completion)
     }
 
 }

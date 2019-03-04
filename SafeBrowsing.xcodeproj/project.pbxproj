@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		813CAFED206A59A900A9ADFE /* SafeBrowsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CAFEC206A59A900A9ADFE /* SafeBrowsing.swift */; };
 		813CAFEF206A59FA00A9ADFE /* SafeBrowsingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CAFEE206A59FA00A9ADFE /* SafeBrowsingModels.swift */; };
+		8156AB26222D2DFC00B29E46 /* UIViewController+SafeBrowsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8156AB25222D2DFC00B29E46 /* UIViewController+SafeBrowsing.swift */; };
 		D577D1D520693C7E00D4A8D0 /* SafeBrowsing.h in Headers */ = {isa = PBXBuildFile; fileRef = D577D1C720693C7E00D4A8D0 /* SafeBrowsing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D577D1DF20693CA200D4A8D0 /* UIApplication+SafeBrowsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577D1DE20693CA200D4A8D0 /* UIApplication+SafeBrowsing.swift */; };
 		D577D210206AFCB600D4A8D0 /* SafeBrowsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577D20F206AFCB600D4A8D0 /* SafeBrowsingTests.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		813CAFEC206A59A900A9ADFE /* SafeBrowsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeBrowsing.swift; sourceTree = "<group>"; };
 		813CAFEE206A59FA00A9ADFE /* SafeBrowsingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeBrowsingModels.swift; sourceTree = "<group>"; };
+		8156AB25222D2DFC00B29E46 /* UIViewController+SafeBrowsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SafeBrowsing.swift"; sourceTree = "<group>"; };
 		D577D1C420693C7E00D4A8D0 /* SafeBrowsing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SafeBrowsing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D577D1C720693C7E00D4A8D0 /* SafeBrowsing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeBrowsing.h; sourceTree = "<group>"; };
 		D577D1C820693C7E00D4A8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				813CAFEC206A59A900A9ADFE /* SafeBrowsing.swift */,
 				813CAFEE206A59FA00A9ADFE /* SafeBrowsingModels.swift */,
 				D577D1DE20693CA200D4A8D0 /* UIApplication+SafeBrowsing.swift */,
+				8156AB25222D2DFC00B29E46 /* UIViewController+SafeBrowsing.swift */,
 				D577D1C720693C7E00D4A8D0 /* SafeBrowsing.h */,
 				D577D1C820693C7E00D4A8D0 /* Info.plist */,
 				D577D1C520693C7E00D4A8D0 /* Products */,
@@ -158,11 +161,12 @@
 				TargetAttributes = {
 					D577D1C320693C7E00D4A8D0 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					D577D20C206AFCB500D4A8D0 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -208,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8156AB26222D2DFC00B29E46 /* UIViewController+SafeBrowsing.swift in Sources */,
 				813CAFEF206A59FA00A9ADFE /* SafeBrowsingModels.swift in Sources */,
 				D577D1DF20693CA200D4A8D0 /* UIApplication+SafeBrowsing.swift in Sources */,
 				813CAFED206A59A900A9ADFE /* SafeBrowsing.swift in Sources */,
@@ -268,7 +273,7 @@
 				CURRENT_PROJECT_VERSION = "$(DYLIB_CURRENT_VERSION)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = 0.1.1;
+				DYLIB_CURRENT_VERSION = 0.1.2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -287,7 +292,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULE_VERSION = "$(DYLIB_CURRENT_VERSION)";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -338,7 +343,7 @@
 				CURRENT_PROJECT_VERSION = "$(DYLIB_CURRENT_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = 0.1.1;
+				DYLIB_CURRENT_VERSION = 0.1.2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -351,7 +356,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULE_VERSION = "$(DYLIB_CURRENT_VERSION)";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -373,6 +378,7 @@
 				INFOPLIST_FILE = SafeBrowsing/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.SafeBrowsing;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -383,6 +389,7 @@
 				INFOPLIST_FILE = SafeBrowsing/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.SafeBrowsing;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -392,6 +399,7 @@
 				INFOPLIST_FILE = SafeBrowsingTests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.SafeBrowsing.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -401,6 +409,7 @@
 				INFOPLIST_FILE = SafeBrowsingTests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.SafeBrowsing.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

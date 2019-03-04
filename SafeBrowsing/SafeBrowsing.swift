@@ -12,7 +12,7 @@ public struct SafeBrowsing {
 
     public static var apiKey: String?
     public static var clientId = Bundle.main.bundleIdentifier ?? "com.alexruperez.SafeBrowsing"
-    public static var clientVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.1.1"
+    public static var clientVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.1.2"
     public static var threatTypes: [ThreatType] = [.malware, .socialEngineering, .unwantedSoftware, .potenciallyHarmfulApplication]
     public static var platformTypes: [PlatformType] = [.any]
     public static var threatEntryTypes: [ThreatEntryType] = [.url, .executable]
@@ -44,22 +44,22 @@ public struct SafeBrowsing {
         return safe
     }
 
-    public static func safeOpen(_ url: URL, application: UIApplication = .shared, urlSession: URLSession = .shared, dispatchQueue: DispatchQueue = .main, options: [String : Any] = [:], completionHandler completion: SafeBrowsingHandler? = nil) {
+    public static func safeOpen(_ url: URL, application: UIApplication = .shared, urlSession: URLSession = .shared, dispatchQueue: DispatchQueue = .main, options: [UIApplication.OpenExternalURLOptionsKey: Any] = [:], completionHandler completion: SafeBrowsingHandler? = nil) {
         isSafe(url, urlSession: urlSession) { safe, error in
             dispatchQueue.async {
                 guard safe else {
                     completion?(safe, error)
                     return
                 }
-                if #available(iOS 10.0, *) {
-                    application.open(url, options: options, completionHandler: { success in
-                        completion?(success, error)
-                    })
-                } else {
-                    completion?(application.openURL(url), error)
-                }
+                application.open(url, options: options, completionHandler: { success in
+                    completion?(success, error)
+                })
             }
         }
+    }
+
+    public static func safeOpenInSafariViewController(_ url: URL, over viewController: UIViewController, animated: Bool = true, application: UIApplication = .shared, completion: SafeBrowsingHandler? = nil) {
+        viewController.safeOpenInSafariViewController(url, application: application, animated: animated, completion: completion)
     }
 
     static func isSafe(_ threatMatchesRequest: ThreatMatchesRequest, urlSession: URLSession = .shared, completionHandler completion: @escaping SafeBrowsingHandler) {
